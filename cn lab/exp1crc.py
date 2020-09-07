@@ -1,72 +1,56 @@
-
 g = "1011"
 n = 3
 print("g is " + g)
 d = input("input: \n")
-print (d + " is data") 
+print ("given data is " + d) 
 
-
-def xor(a, b): 
-    result = [] 
-   
-    for i in range(1, len(b)): 
-        if a[i] == b[i]: 
-            result.append('0') 
+def xor(x, y): 
+    xorred = [] 
+    for i in range(1, len(y)): 
+        if x[i] == y[i]: 
+            xorred.append('0') 
         else: 
-            result.append('1') 
+            xorred.append('1') 
+    return ''.join(xorred) 
    
-    return ''.join(result) 
-   
-   
-def mod2div(divident, divisor): 
-   
-    pick = len(divisor) 
-   
-    tmp = divident[0 : pick] 
-   
-    while pick < len(divident): 
-   
-        if tmp[0] == '1': 
-             tmp = xor(divisor, tmp) + divident[pick] 
-   
+def mod2div(divn, divs): #divide data by generator to get remainder, if remainder is zero then data is valid else invalid
+    z = len(divs) 
+    t_q = divn[0 : z] #to ensure data and gen are of same length in each cycle of division
+    while z < len(divn): 
+        if t_q[0] == '1': 
+             t_q = xor(divs, t_q) + divn[z] 
         else:  
-            tmp = xor('0'*pick, tmp) + divident[pick] 
+            t_q = xor('0'*z, t_q) + divn[z] #storing remainder from each digit in temp output
    
-        pick += 1
-   
-    if tmp[0] == '1': 
-        tmp = xor(divisor, tmp) 
+        z += 1
+    if t_q[0] == '1': 
+        t_q = xor(divs, t_q) 
     else: 
-        tmp = xor('0'*pick, tmp) 
-   
-    checkword = tmp 
-    return checkword 
+        t_q = xor('0'*z, t_q) 
+    outp = t_q #final remainder after all cycles of dividing data
+    return outp 
    
 def encode(a, b): 
     big = a + '000' 
     crc = mod2div(big, b) 
     en = a + crc 
-    return en     
-    
+    return en       
 
 def decode(a, b): 
     big = a + '000' 
     rem = mod2div(big, b) 
-   
     return rem 
 
-
-
 #encoding  
-ansEn = encode(d,g) 
-print("\n" + ansEn + " encoded") 
+Enc = encode(d,g) 
+print("\n" + Enc + " is encoded data") 
   
 #decoding  
-ansDe = decode( ansEn, g) 
-print("\n" +ansDe) 
-  
-#checking 
-if ansDe == '000': 
-    print("\n" + "no error") 
+f_rem = decode( Enc, g)  
+print("\n" + f_rem + " is remainder after decoding data")
+
+#checking output remainder after decoding encoded data
+if f_rem == '000': 
+    print("\n" + "data received without error") 
 else: 
-    print("\n" + "Error") 
+    print("\n" + "Error during data transmission") 
