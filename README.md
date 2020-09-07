@@ -1,7 +1,7 @@
 # TE
 Third Year Computer Engineering experiments
 
-  ❕This repo is still under construction❕ 
+## ❕This repo is still under construction❕ 
 so I'm sorry if anything is out of place or weird or anything, I'm still working on getting everything in the right place.
 
 
