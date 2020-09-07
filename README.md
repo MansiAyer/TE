@@ -8,9 +8,9 @@ so I'm sorry if anything is out of place or weird or anything, I'm still working
  **For Contributions** 
 <div> I'm under an MU-affiliated college so I'm uploading my curriculum. </div> 
 <p> Contrubutions open, feel free to add your versions, or parts that are in your curriculum. Check out open issues if you're not sure what you can contribute to.</p>
-<p>Please use appropriate folders and file names while contributing. </p>
+<div>Please use appropriate folders and file names while contributing. </div>
 
 **Branches**
-<p> Master is final updates that won't have further updates. </p>
+<div> Master is final updates that won't have further updates. </div>
 <p> All other branches are to make updates and edits for files under specific subjects.</p>
-<p>For example, if I'm working on a new code for assembly, it goes under microprocessor branch. If the code is completed with no further updates required, a pull request is made comparing microprocessor branch with master so that all finalized files are updated to master.</p>
+<div>For example, if I'm working on a new code for assembly, it goes under microprocessor branch. If the code is completed with no further updates required, a pull request is made comparing microprocessor branch with master so that all finalized files are updated to master.</div>
