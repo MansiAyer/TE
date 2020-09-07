@@ -5,10 +5,12 @@ Third Year Computer Engineering experiments
 so I'm sorry if anything is out of place or weird or anything, I'm still working on getting everything in the right place. `Suggest improvements by adding it as an issue`
 
 
+
  **For Contributions** 
 <div> I'm under an MU-affiliated college so I'm uploading my curriculum. </div> 
 <div> Contrubutions open, feel free to add your versions, or parts that are in your curriculum. Check out open issues if you're not sure what you can contribute to.</div>
 <p>Please use appropriate folders and file names while contributing. </p>
+
 
 **Branches**
 <div> Master is final updates that won't have further updates. </div>
