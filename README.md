@@ -1,6 +1,8 @@
 # TE
 Third Year Computer Engineering experiments
 
+<h1> Spammy prs will not be entertained. </h1>
+
 ## ❕This repo is still under construction❕ 
 so I'm sorry if anything is out of place or weird or anything, I'm still working on getting everything in the right place. `Suggest improvements by adding it as an issue`
 
